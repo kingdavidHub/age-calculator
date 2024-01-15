@@ -1,31 +1,37 @@
 $(document).ready(function (){
 
   function ageCalc(day, month, year) {
-    var currentDate = new Date();
+     // Get the current date
+     const currentDate = new Date();
+     const currentYear = currentDate.getFullYear();
+     const birthdayThisYear = new Date(currentYear, Number(month) - 1, Number(day));
+ 
+     // storage
+     let age = 0; 
+     // ! GET CURRENT AGE
+     if (currentDate >= birthdayThisYear) {
+         age = currentYear - year;
+     } else {
+         age = currentYear - Number(year) - 1;
+     }
+ 
 
-    var targetDate = new Date(currentDate.getFullYear(), 8, 15);
-    if (currentDate > targetDate) {
-        targetDate.setFullYear(currentDate.getFullYear() + 1);
-    }
-    var timeDifference = targetDate.getTime() - currentDate.getTime();
-
-    // Calculate the number of days remaining
-    var daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-
-    // Calculate the number of months remaining
-    var monthsRemaining = targetDate.getMonth() - currentDate.getMonth() +
-        (12 * (targetDate.getFullYear() - currentDate.getFullYear()));
-    var age = targetDate.getFullYear() - year;
+    // ! countdown for days left
+    const diffTime = Math.abs(birthdayThisYear - currentDate);
+    const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
 
-    // $("#numberSpan").text(newText);
+    //  ! countdown for month lefts
+    const monthsLeft = (Math.ceil(daysLeft / 30.44)) - 1;
 
-    $("#age-num").text(age);
-    $("#months-left").text(monthsRemaining);
-    $("#days-left").text(daysRemaining);
+
+    // Output the result
+        $("#age-num").text(age);
+        $("#months-left").text(monthsLeft);
+        $("#days-left").text(daysLeft);
   }
 
-  // SUMBIT HANDLER
+    // SUMBIT HANDLER
   $(".input-details").on("submit", function( event ) {
     event.preventDefault();
     
