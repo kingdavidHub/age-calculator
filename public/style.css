@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'poppins-bold';
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins-BoldItalic';
+  src: url("../assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins-ExtraBold';
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins-ExtraBoldItalic';
+  src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins-Italic';
+  src: url("../assets/fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background:rgb(240, 240, 240);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.container {
+  height: 500px;
+  width: 700px;
+  background-color: #fff;
+  border-radius: 10px 10px 80px 10px;
+  margin: 0px 20px;
+  padding: 40px;
+  position: relative;
+}
+
+.attribution{
+  margin-top: 2rem;
+}
+
+input[type=number] {
+  width: 105px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.input-details {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-details > div {
+  margin-right: 20px;
+}
+
+hr {
+  width: 70%;
+}
+
+
+input[type=submit]{
+  border: none;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: hsl(259, 100%, 65%);
+  position: absolute;
+  right: 160px;
+  top: 90px; 
+  background-image: url("../assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input[type="number"] {
+  font-family: "Poppins-ExtraBold", Arial;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+
+.input-details p {
+  color: #8b8b8b;
+  font-family: "poppins-bold", Arial;
+}
+
+/* age-result */
+.age-result > h2{
+  font-size: 4.5rem;
+  font-family: 'Poppins-ExtraBoldItalic', Arial;
+}
+
+.age-result .age-num {
+  color: rgb(134, 76, 253);
+  font-family: 'Poppins-ExtraBoldItalic', Arial;
+}
+
+
+
+
+/* error handling */
+.input-details .error {
+  color: #e8737c;
+}
+
+.input-error{
+  border: 1px solid #e8737c;
+}
+
+.input-details .requirement-error {
+  font-size: 10px;
+  font-family: "Poppins-Italic", Arial;
+  display: none;
+  color: #e8737c;
+  
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    width: 400px;
+    padding: 20px;
+  }
+
+  .input-details {
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  input[type=submit]{
+    top: 24%;
+  }
+
+  .input-details > div {
+    margin-right: 0px;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  .age-result {
+    margin-top: 50px;
+  }
+
+  .age-result > h2{
+    font-size: 4rem;
+  }
+}

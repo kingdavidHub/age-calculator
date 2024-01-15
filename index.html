@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./public/style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <input type="number" name="" id=""> -->    
+    <form class="input-details">
+      <div>
+        <p>DAY</p>
+        <input class="" type="number" name="day" id="day" min="1" max="31" placeholder="DD">
+        <p class="requirement-error">This field is required</p>
+      </div>
+      <div>
+        <p>MONTH</p>
+        <input type="number" name="month" id="month" placeholder="MM" min="1" max="12">
+        <p class="requirement-error">This field is required</p>
+      </div>
+      <div>
+        <p>YEAR</p>
+        <input type="number" name="year" id="year" placeholder="YYYY" min="1900">
+        <p class="requirement-error">This field is required</p>
+      </div>
+      <input type="submit" id="submit" value="">
+    </form>
+    <hr>
+
+
+    <!-- age -->
+    <section class="age-result">
+      <h2><span class="age-num" id="age-num">38</span>years</h2>
+      <h2><span class="age-num" id="months-left">3</span>months</h2>
+      <h2><span class="age-num" id="days-left">26</span>days</h2>
+    </section>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/kingdavidHub">KingdavidHUB</a>.
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
